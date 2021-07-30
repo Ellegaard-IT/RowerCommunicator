@@ -68,7 +68,7 @@ namespace RowerCommunicator
         /// </summary>
         /// <returns> ERRCODE_T   ecode       Zero if successful / Error code otherwise </returns>
         [DllImport("PM3USBCP.dll", CallingConvention = CallingConvention.Cdecl)]
-        public static unsafe extern uint tkcmdsetUSB_find_devices(int* product_name, uint* num_found,UInt16[] port_list);
+        public static unsafe extern uint tkcmdsetUSB_find_devices(int* product_name,out uint* num_found,out UInt16[] port_list);
 
         /// <summary>
         ///     About:      Handle the command / response transaction with the USB device
